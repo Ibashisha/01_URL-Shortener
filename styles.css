@@ -1,0 +1,136 @@
+@import "css/normalize.css";
+@import "css/layout.css";
+@import "css/theme.css";
+
+/* #region Common Styles */
+
+/* #region App Header */
+.app-header {
+  height: 160px;
+  grid-column: 1/4;
+
+  display: grid;
+  grid-template-columns: inherit;
+}
+
+.app-header .navbar {
+  grid-row: 1;
+  grid-column: 2/3;
+
+  display: flex;
+  align-items: center;
+}
+
+.app-header .navbar-brand {
+  line-height: 0;
+  margin-right: 45px;
+}
+
+.app-header .toggle-nav {
+  display: none;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.app-header .toggle-nav .icon-menu {
+  fill: var(--gray);
+}
+
+.app-header .navbar-nav {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  font-size: 14px;
+}
+
+.app-header .navbar-nav a {
+  margin-right: 30px;
+  text-decoration: none;
+  color: var(--grayish-violet);
+}
+
+.app-header .navbar-nav a:active {
+  color: var(--dark-violet);
+}
+
+.app-header .navbar .actions {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.app-header .btn-login {
+  margin-left: auto;
+}
+
+#nav-visible {
+  position: absolute;
+  left: -100px;
+  top: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.seperator-mobile {
+  height: 0;
+}
+
+@media (max-width: 1439px) {
+  .app-header {
+    height: 90px;
+  }
+
+  .app-header .toggle-nav {
+    display: block;
+  }
+
+  .app-header .navbar {
+    justify-content: space-between;
+  }
+
+  .app-header .navbar-nav {
+    position: absolute;
+    top: 90px;
+    left: 15px;
+  }
+}
+
+.intro {
+  grid-column: 1/4;
+
+  display: grid;
+  grid-template-columns: inherit;
+
+  overflow: hidden;
+}
+
+.intro .img-wrapper {
+  grid-column: 2/4;
+  justify-self: end;
+  grid-row: 1;
+}
+
+.intro .content {
+  grid-column: 2/3;
+  grid-row: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  max-width: 60%;
+}
+
+.intro .content > * {
+  margin-bottom: 40px;
+}
+
+.intro .content .btn {
+  padding: 19px 40px;
+}
+
+.intro .content .title {
+  font-size: 80px;
+  line-height: 1.1;
+}
